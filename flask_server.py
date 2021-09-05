@@ -3,12 +3,13 @@ import image_list
 
 server = Flask(__name__, static_url_path='')
 
-@server.route('/<path:filename>')
+@server.route('/images/<filename>')
 def show_image(filename):
 
     '''output image by it's name'''
 
-    return send_from_directory('images', filename)
+    print(f'GET request: /images/{filename}')
+    return send_from_directory('/images', filename)
 
 
 @server.route('/image', methods=['GET'])

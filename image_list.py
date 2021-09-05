@@ -2,7 +2,7 @@ import os
 import time
 import base64
 
-def get_list_of_files(route='images'):
+def get_list_of_files(route='/images'):
 
     '''list all images with name, size in kB and last modification date'''
 
@@ -25,7 +25,7 @@ def remove(name):
 
     '''remove image by it's name '''
 
-    path = 'images/' + name
+    path = '/images/' + name
     os.remove(path)
     return {'success' : 'image deleted'}
 
@@ -34,6 +34,6 @@ def make_image_base64(str_in_base64):
 
     ''' create new image by base64 string '''
 
-    with open('images/new_img.jpg', 'wb') as decoded:
+    with open('/images/new_img.jpg', 'wb') as decoded:
         decoded.write(base64.b64decode(str_in_base64))
     return {'success' : 'image created'}

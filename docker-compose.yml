@@ -8,3 +8,5 @@ services:
       - PYTHONUNBUFFERED=1
     ports: 
       - "8000:8000"
+    volumes: 
+      - "./images:/images"
