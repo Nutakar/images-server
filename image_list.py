@@ -30,10 +30,10 @@ def remove(name):
     return {'success' : 'image deleted'}
 
 
-def make_image_base64(str_in_base64):
+def make_image_base64(name, str_in_base64):
 
     ''' create new image by base64 string '''
 
-    with open('/images/new_img.jpg', 'wb') as decoded:
+    with open(f'/images/{name}', 'wb') as decoded:
         decoded.write(base64.b64decode(str_in_base64))
     return {'success' : 'image created'}
