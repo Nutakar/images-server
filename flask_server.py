@@ -44,6 +44,3 @@ def create_from_base64():
     result = image_list.make_image_base64(name, str_in_base64)
     print('POST request: /image/base64')
     return result
-
-
-# curl -d '[{"name":"red.jpg", "img_base64" : "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg=="}]' -H "Content-Type: application/json" -X POST http://localhost:8000/image

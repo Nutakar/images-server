@@ -13,6 +13,7 @@ The preceding command build images if they don't exist and starts the containers
   List info about all images in the directory with name, size and last modification date
 - *http://{hostname}:{port]/image/{image name}*  
   Remove an image from the directory by it's name
-- *http://{hostname}:{port]/image/{base64 string}*  
+- *http://{hostname}:{port]/image* 
+  json body: {'name' : '[name]', 'img_base64' : '[img in base64]'} 
   Create a new image by base 64 string
   
